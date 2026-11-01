@@ -50,10 +50,13 @@ int main(){
     printf("size of password is %zu\n", strlen(password));
     */
 
+
+    // بعد التعديل واضافة score عشان نحدد قوة كلمة المرور
     if(strlen(password) >= min_length) is_length_ok = 1;
 
     int score = has_uppercase + has_lowercase + has_number + has_special + is_length_ok;
-
+    // عشان نعرف كم طول ادخلنا 
+    printf("length: %zu\n", strlen(password));
     if(!is_length_ok){
         printf("Your Password is Weak");
     } else if (score >= 4){
